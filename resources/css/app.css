@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    scroll-behavior: smooth;
+}
+/* -----------Слайдер-------------- */
+#myCarousel,
+#myCarousel2 {
+    --f-carousel-slide-height: 100%;
+    --f-carousel-spacing: 10px;
+
+    height: 700px;
+}
+.f-carousel__slide{
+    height: 700px;
+}
+
+#ServBlock:hover p{
+    color: white;
+}
+#ServBlock,
+#ServBlock>p{
+    transition: 250ms ease-in-out;
+}
+
+#ServBlock:hover{
+    background-color:#00a8e8;
+}
+
+.f-carousel {
+    --f-carousel-slide-width: calc(100% / 3);
+}
+
+::selection {
+    background: #7bd0f1;
+}
+
+::-moz-selection {
+    background: #7bd0f1;
+}

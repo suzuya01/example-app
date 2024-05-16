@@ -1,0 +1,5 @@
+*
+!default/
+!upload/
+!moonshine_users/
+!.gitignore
