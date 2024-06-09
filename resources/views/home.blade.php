@@ -20,7 +20,7 @@
             <p class="text-md uppercase mb-6 tracking-wider">о компании</p>
             <p class="text-6xl uppercase font-semibold mb-8">«Магия Трав»</p>
             <p class="text-sm text-gray-500 mb-8 font-extralight">активно растущая научно-производственная компания. Главный приоритет в работе – высокое качество выпускаемой продукции. Залог успеха предприятия — коллектив увлеченных профессионалов, работающий на базе мощного научного потенциала. Наши специалисты в области фармацевтической технологии, фармакогнозии и химии занимаются разработкой оригинальных рецептур, практическими, научными исследованиями и испытанием выпускаемой продукции. </p>
-            <a href="{{route('catalog')}}"><button class="text-sm font-semibold uppercase bg-gradient-to-r from-[#06d6a0] to-[#00a8e8] px-6 py-3 text-white shadow-xl hover:shadow-[#00a6e873] transition duration-200">посмотреть продукцию</button></a>
+            <a href="{{route('catalog',['category'=>'all'])}}"><button class="text-sm font-semibold uppercase bg-gradient-to-r from-[#06d6a0] to-[#00a8e8] px-6 py-3 text-white shadow-xl hover:shadow-[#00a6e873] transition duration-200">посмотреть продукцию</button></a>
         </div>
         <div class="w-[550px]">
             <img src="{{asset('storage/default/olen.png')}}" alt="" width="">
@@ -60,7 +60,7 @@
             <p class="text-md uppercase mb-6 tracking-wider">о компании</p>
             <p class="text-4xl uppercase font-semibold mb-8">Что мы производим</p>
             <p class="text-sm text-gray-500 mb-8 font-extralight">Предприятие производит более 100 наименований высококачественной эко-продукции на основе целебных растений (трав Алтая), продукции пчеловодческих и фермерских хозяйств Республики Алтай и Алтайского края. Вих числе ряд востребованных линий: «Горная Сибирь» — линия бальзамов существует уже более 20 лет и включает в себя витаминные, успокаивающие, иммуномодулирующие и очищающие настои;</p>
-            <a href="{{route('catalog')}}"><button class="text-sm font-semibold uppercase bg-gradient-to-r from-[#06d6a0] to-[#00a8e8] px-6 py-3 text-white shadow-xl hover:shadow-[#00a6e873] transition duration-200">посмотреть продукцию</button></a>
+            <a href="{{route('catalog',['category'=>'all'])}}"><button class="text-sm font-semibold uppercase bg-gradient-to-r from-[#06d6a0] to-[#00a8e8] px-6 py-3 text-white shadow-xl hover:shadow-[#00a6e873] transition duration-200">посмотреть продукцию</button></a>
         </div>
     </div>
 </div>
@@ -90,7 +90,7 @@
 </div>
 <div class="container mx-auto w-[1200px] p-10 mb-16">
     <p class="text-4xl uppercase font-semibold mb-16">Наши бренды</p>
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between flex-wrap">
         <div><img src="{{asset('storage/default/Altayskiy_balzam_1x.jpg')}}" alt="" width="150px" class="cursor-crosshair grayscale hover:grayscale-0 transition duration-300 ease-in-out"></div>
         <div><img src="{{asset('storage/default/chaga_2x.jpg')}}" alt="" width="150px" class="cursor-crosshair grayscale hover:grayscale-0 transition duration-300 ease-in-out"></div>
         <div><img src="{{asset('storage/default/Gornaya_Sibir_2_2x.jpg')}}" alt="" width="150px" class="cursor-crosshair grayscale hover:grayscale-0 transition duration-300 ease-in-out"></div>
@@ -114,7 +114,7 @@
                 <div class="flex items-center gap-10 mt-5 mb-10">
                     <img src="{{asset('storage/default/email.png')}}" alt="" width="30">
                     <div class="">
-                        <p class="text-md text-gray-800">magiatrav@inbox.ru</p>
+                        <p class="text-md text-gray-800">magiatrrav@mail.ru</p>
                         <p class="text-sm text-gray-500">Присылайте нам свой вопросы в любое время!</p>
                     </div>
                 </div>
@@ -122,10 +122,11 @@
             </div>
             <div class="">
                 <p class="text-4xl uppercase font-semibold mb-16">Остались вопросы ?</p>
-                <form action="email.php" method="post" class="flex flex-col gap-6">
+                <form action="{{route('feedback')}}" method="post" class="flex flex-col gap-6">
+                    @csrf
                     <input type="text" name="name" id="" placeholder="Ваше имя" class="border p-3 text-sm outline-none" required>
                     <input type="email" name="email" id="" placeholder="Ваш e-mail" class="border p-3 text-sm outline-none" required>
-                    <textarea name="message" id="" cols="30" rows="10" placeholder="Сообщение" class="border p-3 text-sm outline-none" required></textarea>
+                    <textarea name="text" id="" cols="30" rows="10" placeholder="Сообщение" class="border p-3 text-sm outline-none" required></textarea>
                     <button type="submit" class="bg-[#00a8e8] text-white border p-3 outline-none hover:bg-[#06d6a0] transition duration-300 ease-in-out text-xl font-bold">Отправить</button>
                 </form>
             </div>

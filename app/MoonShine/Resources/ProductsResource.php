@@ -38,6 +38,7 @@ class ProductsResource extends ModelResource
             BelongsTo::make('категория', 'category')
             ->badge('info'),
             Text::make('производство', 'production'),
+            Number::make('цена', 'price'),
             Number::make('объем, мл', 'vol'),
             Textarea::make('описание', 'description')
             ->hideonindex(),

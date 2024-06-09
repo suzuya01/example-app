@@ -12,8 +12,8 @@ return [
     'dir' => 'app/MoonShine',
     'namespace' => 'App\MoonShine',
 
-    'title' => env('MOONSHINE_TITLE', 'MoonShine'),
-    'logo' => env('MOONSHINE_LOGO'),
+    'title' => env('MOONSHINE_TITLE', 'MAGIATRAV AdminPanel'),
+    'logo' => env('MOONSHINE_LOGO','storage/default/biglogo.png'),
     'logo_small' => env('MOONSHINE_LOGO_SMALL'),
 
     'route' => [

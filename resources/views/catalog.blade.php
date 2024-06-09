@@ -2,11 +2,10 @@
 @section('content')
 <div id="catalog" class="container w-[1200px] mx-auto pt-[115px]">
     <div id="blockCategoris" class="flex gap-3">
-        <button class="text-sm uppercase rounded-3xl bg-gray-200 py-2 px-5 hover:bg-gray-300 transition duration-500 ease-in-out">всё</button>
-        <button class="text-sm uppercase rounded-3xl bg-gray-200 py-2 px-5 hover:bg-gray-300 transition duration-500 ease-in-out">бальзамы</button>
-        <button class="text-sm uppercase rounded-3xl bg-gray-200 py-2 px-5 hover:bg-gray-300 transition duration-500 ease-in-out">эликсиры</button>
-        <button class="text-sm uppercase rounded-3xl bg-gray-200 py-2 px-5 hover:bg-gray-300 transition duration-500 ease-in-out">чай</button>
-        <button class="text-sm uppercase rounded-3xl bg-gray-200 py-2 px-5 hover:bg-gray-300 transition duration-500 ease-in-out">травы</button>
+        <button onclick="document.location='{{route('catalog',['category'=>'all'])}}'" class="text-sm uppercase rounded-3xl bg-gray-200 py-2 px-5 hover:bg-gray-300 transition duration-500 ease-in-out">всё</button>
+        @foreach ($categories as $category)
+        <button onclick="document.location='{{route('catalog',['category'=>$category->id])}}'" class="text-sm uppercase rounded-3xl bg-gray-200 py-2 px-5 hover:bg-gray-300 transition duration-500 ease-in-out">{{$category->name}}</button>
+        @endforeach
     </div>
     <div id="Products" class="py-10 flex items-center justify-start flex-wrap gap-16">
         @foreach ($products as $product)

@@ -21,8 +21,9 @@
                     <p id="ProductMoa" class="text-m mb-4"><span class="text-m font-bold">Способ применения: </span>{{$product->moa}}</p>
                     <p id="ProductYslHran" class="text-m mb-4"><span class="text-m font-bold">Условия хранения: </span>{{$product->yslHran}}</p>
                     <p id="ProductTime" class="text-m"><span class="text-m font-bold">Срок годности: </span>{{$product->expirationDate}}</p>
+                    <p id="Price" class="text-m"><span class="text-m font-bold">Цена: </span>{{$product->price}} ₽</p>
                     <div class="my-4">
-                        <button onclick="document.location='{{route('catalog')}}'" class="text-white w-full font-bold uppercase bg-gray-300 hover:bg-[#00a8e8] transition duration-500 ease-in-out py-2 mt-3">вернуться в каталог</button>
+                        <button onclick="document.location='{{route('catalog',['category'=>'all'])}}'" class="text-white w-full font-bold uppercase bg-gray-300 hover:bg-[#00a8e8] transition duration-500 ease-in-out py-2 mt-3">вернуться в каталог</button>
                     </div>
                 </div>
             </div>

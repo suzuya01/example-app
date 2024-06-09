@@ -2,8 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Product;
+use App\Models\Category;
+use Illuminate\Http\Request;
 use App\Http\Controllers\ProductController;
-
+use App\Http\Controllers\CatalogController;
+use App\Mail\Feedback;
+use Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +19,12 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {return view('home');}) ->name("home");
-Route::get('/catalog', function () {return view('catalog', ['products' => Product::all()]);}) ->name("catalog");
+Route::get('/', function () {
+    return view('home');
+    }) ->name("home");
+Route::get('/catalog/{category}',[CatalogController::class,'show']) ->name("catalog");
 Route::get('/product/{product}',[ProductController::class,'show']) ->name("product");
+Route::post('/feedback',function (Request $request) {
+    Mail::to('magiatrrav@mail.ru')->send(new Feedback($request->name,$request->email,$request->text));
+    return view('home');
+    })->name("feedback");

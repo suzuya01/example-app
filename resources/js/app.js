@@ -6,10 +6,15 @@ Fancybox.bind('[data-fancybox="gallery"]', {
     // Your custom options
   });
 
+
 const container = document.getElementById("myCarousel");
-const options = {infinite: true};
+const options = {
+
+  infinite: true
+};
 
 new Carousel(container, options);
+
 
 // let truncate = document.querySelector("#ProductInfo p");
 // $clamp(truncate, {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{asset('storage/default/logo.png')}}" type="image/png">
+    <link rel="shortcut icon" href="{{asset('storage/default/biglogo.png')}}" type="image/png">
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"/>
@@ -20,7 +20,7 @@
             <ul class="flex items-center gap-6 p-6">
                 <li class="text-sm font-medium uppercase hover:text-[#00a8e8] transition duration-200 @if (Route::currentRouteName() == 'home') text-[#00a8e8] @endif "><a href="{{route('home')}}">главная</a></li>
                 <li class="text-sm font-medium uppercase hover:text-[#00a8e8] transition duration-200"><a href="{{route('home')}}#about">о нас</a></li>
-                <li class="text-sm font-medium uppercase hover:text-[#00a8e8] transition duration-200 @if (Route::currentRouteName() == 'catalog') text-[#00a8e8] @endif "><a href="{{route('catalog')}}">каталог</a></li>
+                <li class="text-sm font-medium uppercase hover:text-[#00a8e8] transition duration-200 @if (Route::currentRouteName() == 'catalog') text-[#00a8e8] @endif "><a href="{{route('catalog',['category'=>'all'])}}">каталог</a></li>
                 <li class="text-sm font-medium uppercase hover:text-[#00a8e8] transition duration-200"><a href="{{route('home')}}#contact">контакты</a></li>
             </ul>
         </div>
