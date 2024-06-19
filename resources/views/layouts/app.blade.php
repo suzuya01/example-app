@@ -12,6 +12,7 @@
     <title>magiatrav</title>
 </head>
 <body>
+    {{-- Шапка --}}
     <header class="bg-white w-full fixed shadow-sm z-20">
         <div class="container mx-auto flex items-center justify-between w-[1200px]">
             <div class="">
@@ -25,18 +26,17 @@
             </ul>
         </div>
     </header>
+
+    {{-- Секция для основной информации --}}
     <main class="w-full min-h-screen">
         @yield('content')
     </main>
+
+    {{-- Подвал --}}
     <footer class="bg-zinc-800">
         <div class="container mx-auto w-[1200px] flex justify-between items-center py-10">
             <p class="text-2xl font-semibold uppercase text-white">magiatrav</p>
             <p class="text-white font-thin">Copyright © 2023 <a target="_blank" href="https://vk.com/ilililililililililililililililqp" class="text-gray-500 uppercase hover:underline">magiatrav</a>. All rights reserved</p>
-            {{-- <div class="flex gap-2">
-                <a href="" class="grayscale opacity-40 hover:scale-110 hover:rotate-[360deg] hover:grayscale-0 hover:opacity-100 transition duration-200"><img src="src/images/telegram (1).png" alt="" width="32px"></a>
-                <a href="" class="grayscale opacity-40 hover:scale-110 hover:rotate-[360deg] hover:grayscale-0 hover:opacity-100 transition duration-200"><img src="src/images/discord (1).png" alt="" width="32px"></a>
-                <a href="" class="grayscale opacity-40 hover:scale-110 hover:rotate-[360deg] hover:grayscale-0 hover:opacity-100 transition duration-200"><img src="src/images/vk (1).png" alt="" width="32px"></a>
-            </div> --}}
         </div>
     </footer>
     @vite('resources/js/app.js')
