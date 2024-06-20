@@ -39,7 +39,7 @@ return [
         'mark_as_read' => 'Mark as read',
     ],
     'login' => [
-        'title' => 'Добро пожаловать Magiatrav',
+        'title' => 'Добро пожаловать Бальзамы Алтая',
         'description' => 'Пожалуйста, войдите в свою учетную запись',
         'authorization' => 'Авторизация',
         'remember_me' => 'Запомнить меня',

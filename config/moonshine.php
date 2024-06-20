@@ -12,9 +12,9 @@ return [
     'dir' => 'app/MoonShine',
     'namespace' => 'App\MoonShine',
 
-    'title' => env('MOONSHINE_TITLE', 'MAGIATRAV AdminPanel'),
+    'title' => env('MOONSHINE_TITLE', 'Бальзамы Алтая AdminPanel'),
     'logo' => env('MOONSHINE_LOGO','storage/default/biglogo.png'),
-    'logo_small' => env('MOONSHINE_LOGO_SMALL'),
+    'logo_small' => env('MOONSHINE_LOGO_SMALL','storage/default/biglogo.png'),
 
     'route' => [
         'domain' => env('MOONSHINE_URL', ''),

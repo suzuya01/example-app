@@ -18,7 +18,7 @@
     <div class="container mx-auto flex items-center justify-between w-[1200px] max-lg:px-[10px]">
         <div class="w-[550px] max-lg:w-[414px] max-lg:py-[20px]">
             <p class="text-md uppercase mb-6 tracking-wider">о компании</p>
-            <p class="text-6xl uppercase font-semibold mb-8">«Бальзамы Алтая»</p>
+            <p class="text-4xl uppercase font-semibold mb-8">«Бальзамы Алтая»</p>
             <p class="text-sm text-gray-500 mb-8 font-extralight max-lg:m-1">активно растущая научно-производственная компания. Главный приоритет в работе – высокое качество выпускаемой продукции. Залог успеха предприятия — коллектив увлеченных профессионалов, работающий на базе мощного научного потенциала. Наши специалисты в области фармацевтической технологии, фармакогнозии и химии занимаются разработкой оригинальных рецептур, практическими, научными исследованиями и испытанием выпускаемой продукции. </p>
             <a href="{{route('catalog',['category'=>'all'])}}"><button class="text-sm font-semibold uppercase bg-gradient-to-r from-[#06d6a0] to-[#00a8e8] px-6 py-3 text-white shadow-xl hover:shadow-[#00a6e873] transition duration-200">посмотреть продукцию</button></a>
         </div>
