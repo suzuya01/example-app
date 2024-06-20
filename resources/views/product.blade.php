@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('content')
 <div id="product" class="w-full pt-[115px]">
-        <div class="container w-[1200px] mx-auto pt-10">
-            <div class="flex items-start justify-between">
+        <div class="container w-[1200px] mx-auto pt-10 max-lg:w-full">
+            <div class="flex items-start justify-between max-lg:items-center max-lg:flex-col">
                 <div class="f-panzoom shadow-md" id="myPanzoom">
                     <a href="{{asset('storage/'.$product->img)}}" data-fancybox="gallery" data-caption="">
-                        <img class="f-panzoom__content cursor-zoom-in" src="{{asset('storage/'.$product->img)}}" alt="изображение отсутствует" width="500px" />
+                        <img class="f-panzoom__content cursor-zoom-in max-lg:w-[350px]" src="{{asset('storage/'.$product->img)}}" alt="изображение отсутствует" width="500px" />
                     </a>
                 </div>
                 <div id="ProductInfo" class="py-3 px-4 max-w-[600px]">
